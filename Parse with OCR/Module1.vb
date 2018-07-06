@@ -10,9 +10,9 @@
 '*******************************************************************************************'
 
 
-Imports ByteScout.InvoiceParser
+Imports ByteScout.DocumentParser
 
-' This example demonstrates the use of Optical Character Recognition (OCR) to parse invoice 
+' This example demonstrates the use of Optical Character Recognition (OCR) to parse document 
 ' from scanned PDF documents and raster images.
 
 Module Module1
@@ -21,26 +21,26 @@ Module Module1
 
         Dim inputDocument1 As String = ".\DigitalOcean-scanned.jpg"
 
-        ' Create InvoiceParser instance
-        Using invoiceParser As New InvoiceParser("demo", "demo")
+        ' Create DocumentParser instance
+        Using documentParser As New DocumentParser("demo", "demo")
 
             ' Enable Optical Character Recognition (OCR)
             ' in .Auto mode (SDK automatically checks if needs to use OCR or not)
-            invoiceParser.OCRMode = OCRMode.Auto
+            documentParser.OCRMode = OCRMode.Auto
             
             ' Set the location of "tessdata" folder containing language data files
-            invoiceParser.OCRLanguageDataFolder = ".\tessdata\"
+            documentParser.OCRLanguageDataFolder = ".\tessdata\"
 
             ' Set OCR language
-            invoiceParser.OCRLanguage = "eng"
+            documentParser.OCRLanguage = "eng"
             ' "eng" for english, "deu" for German, "fra" for French, "spa" for Spanish etc - according to files in /tessdata
             ' Find more language files at https://github.com/tesseract-ocr/tessdata/tree/3.04.00
 
             Console.WriteLine($"Parsing ""{inputDocument1}""...")
             Console.WriteLine()
 
-            ' Parse invoice data in JSON format
-            Dim jsonString As String = invoiceParser.ParseDocument(inputDocument1, OutputFormat.JSON)
+            ' Parse document data in JSON format
+            Dim jsonString As String = documentParser.ParseDocument(inputDocument1, OutputFormat.JSON)
             ' Display parsed data in console
             Console.WriteLine("Parsing results in JSON format:")
             Console.WriteLine()

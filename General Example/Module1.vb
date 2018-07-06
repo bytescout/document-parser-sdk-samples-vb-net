@@ -10,9 +10,9 @@
 '*******************************************************************************************'
 
 
-Imports ByteScout.InvoiceParser
+Imports ByteScout.DocumentParser
 
-' This example demonstrates invoice data parsing to JSON and YAML formats.
+' This example demonstrates document data parsing to JSON and YAML formats.
 
 Module Module1
 
@@ -21,14 +21,14 @@ Module Module1
         Dim inputDocument1 As String = ".\DigitalOcean.pdf"
         Dim inputDocument2 As String = ".\AmazonAWS.pdf"
 
-        ' Create InvoiceParser instance
-        Using invoiceParser As New InvoiceParser("demo", "demo")
+        ' Create DocumentParser instance
+        Using documentParser As New DocumentParser("demo", "demo")
 
             Console.WriteLine($"Parsing ""{inputDocument1}""...")
             Console.WriteLine()
 
-            ' Parse invoice data in JSON format
-            Dim jsonString As String = invoiceParser.ParseDocument(inputDocument1, OutputFormat.JSON)
+            ' Parse document data in JSON format
+            Dim jsonString As String = documentParser.ParseDocument(inputDocument1, OutputFormat.JSON)
             ' Display parsed data in console
             Console.WriteLine("Parsing results in JSON format:")
             Console.WriteLine()
@@ -38,8 +38,8 @@ Module Module1
             Console.WriteLine($"Parsing ""{inputDocument2}""...")
             Console.WriteLine()
 
-            ' Parse invoice data in YAML format
-            Dim yamlString As String = invoiceParser.ParseDocument(inputDocument2, OutputFormat.YAML)
+            ' Parse document data in YAML format
+            Dim yamlString As String = documentParser.ParseDocument(inputDocument2, OutputFormat.YAML)
             ' Display parsed data in console
             Console.WriteLine("Parsing results in YAML format:")
             Console.WriteLine()
