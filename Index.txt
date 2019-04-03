@@ -2,3 +2,4 @@
 
 \Create Custom Template
 \Parse Simple Document
+\Parse with OCR
