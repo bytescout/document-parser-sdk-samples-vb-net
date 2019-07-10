@@ -1,5 +1,6 @@
 ## Index of source code examples:
 
 \Create Custom Template
+\Parse Multipage Table
 \Parse Simple Document
 \Parse with OCR
