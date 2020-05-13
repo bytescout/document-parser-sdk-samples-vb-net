@@ -3,6 +3,7 @@
 \Blood Test Results to JSON
 \Create Custom Template
 \Extract line items from tables on multiple pages
+\Extract Text from Foldable Brochure Booklet
 \Parse Multipage Table
 \Parse Simple Document
 \Parse with OCR
