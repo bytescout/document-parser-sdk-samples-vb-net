@@ -1,6 +1,7 @@
 ## Index of source code examples:
 
 \Blood Test Results to JSON
+\Census table from life and annuity quote request pdf
 \Create Custom Template
 \Extract line items from tables on multiple pages
 \Extract Text from Foldable Brochure Booklet
