@@ -7,5 +7,6 @@
 \Extract Text from Foldable Brochure Booklet
 \Parse Multipage Table
 \Parse Simple Document
+\Parse Typical Invoice
 \Parse with OCR
 \Parsing and reading data from Airline Tickets
